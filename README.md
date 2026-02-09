@@ -37,5 +37,6 @@ Finally, I've also made the working buttons available on SofaBaton universal rem
 If you find these codes are not working for your monitor, here are some things you can experiment with:
 
 1. If nothing works, vary the carrier frequency and/or duty cycle. Start at 38khz with a base and vary up or down within 1khz. Start with a duty cycle of 25% and vary plus or minus 20-33%. And of course, confirm your monitor has an IR receiver. Not every monitor in the CZ-6XX series does.
-2. Change the gap between Frame A and Frame B,  and/or the gap following frame B. Keep gaps consistent between frames.
-3. Make sure you are in the correct mode for buttons that have mode-specific functions, and that appropriate inputs are being sent to the monitor for the given modes and button functions. Known mode-specific buttons/states are listed above. 
+2. Vary timings, but keep the ratio consistent. The timing value for 1 should be roughly double the value of 0. For example, in my code, 0 = total bit time of 289 + 789 = 1078 µs, and 1 = total bit time of 289 + 1841 = 2130 µs. Is this a perfect double? No, but more importantly, it works. Adjust your timings accordingly.
+3. Change the gap between Frame A and Frame B,  and/or the gap following frame B. Keep gaps consistent between frames.
+4. Make sure you are in the correct mode for buttons that have mode-specific functions, and that appropriate inputs are being sent to the monitor for the given modes and button functions. Known mode-specific buttons/states are listed above. 
